@@ -98,7 +98,7 @@
                 </picture>
                 <img
                   class="hero__rings"
-                  src="/assets/images/pattern-rings.svg"
+                  src="./assets/images/pattern-rings.svg"
                   alt=""
                   width="530"
                   height="129"
@@ -319,7 +319,7 @@
                     required
                   />
                   <img
-                    src="/assets/images/icon-invalid.svg"
+                    src="./assets/images/icon-invalid.svg"
                     alt=""
                     class="contact__invalid-icon"
                     width="24"
@@ -337,7 +337,7 @@
                     required
                   ></textarea>
                   <img
-                    src="/assets/images/icon-invalid.svg"
+                    src="./assets/images/icon-invalid.svg"
                     alt=""
                     class="contact__invalid-icon"
                     width="24"
@@ -419,22 +419,6 @@
           </div>
         </footer>
 
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-          function sendEmail() {
-            Email.send({
-              Host: "smtp.gmail.com",
-              Username: "pranavkcse@gmail.com",
-              Password: "password",
-              To: 'them@website.com',
-              From: "you@isp.com",
-              Subject: "This is the subject",
-              Body: "And this is the body"
-            }).then(
-              message => alert(message)
-            );
-          }
-        </script>
 </body>
 
 </html>
