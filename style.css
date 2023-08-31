@@ -4,11 +4,17 @@
 
 /* Custom Properties */
 :root {
-    --bg-body: hsl(0, 0%, 8%); /* Black */
-    --bg-body2: hsl(0, 0%, 14%); /* Dark Gray */
-    --accent: hsl(153, 71%, 59%); /* Accent */
-    --text1: hsl(0, 0%, 100%); /* White */
-    --text2: hsl(0, 0%, 85%); /* Less White */
+    --bg-body: hsl(0, 0%, 8%);
+    /* Black */
+    --bg-body2: hsl(0, 0%, 14%);
+    /* Dark Gray */
+    /* --accent: hsl(153, 71%, 59%); Accent */
+    --accent: hsl(18, 83%, 63%);
+    /* Accent */
+    --text1: hsl(0, 0%, 100%);
+    /* White */
+    --text2: hsl(0, 0%, 85%);
+    /* Less White */
     --invalid: hsl(7, 100%, 68%);
     --fs-18: 1.125rem;
     /* Desktop xlarge */
@@ -26,7 +32,9 @@
     /* Mobile large */
     --fs-24: 1.5rem;
     --fs-20: 1.25rem;
+    /* Space */
     --container: 69.375rem;
+    /* Animation */
     --transition: 250ms ease-in-out;
 }
 
@@ -54,7 +62,7 @@ body,
 input,
 textarea,
 button {
-  font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
@@ -70,3 +78,93 @@ body {
     background-color: var(--bg-body2);
 }
 
+a:hover {
+    color: var(--accent);
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: calc(100% - 2rem);
+    max-width: var(--container);
+    margin-inline: auto;
+}
+
+/* 600px Breakpoint*/
+@media (min-width: 37.5em) {
+    .wrapper {
+        width: calc(100% - 3.75rem);
+    }
+}
+
+
+/* HEADER */
+
+.header {
+    position: relative;
+    z-index: 1;
+    margin-block-start: 20px;
+}
+
+/* mobile first nav */
+.header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px 25px;
+}
+
+.header__home {
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.02rem + 2.04vw, 2rem);
+    line-height: 1;
+    color: var(--text1);
+    text-decoration: none;
+    flex: 1 0 100%;
+}
+
+.header__social>svg>path {
+    transition: fill var(--transition);
+}
+
+.header__social:hover>svg>path {
+    fill: var(--accent);
+}
+
+@media (min-width: 37.5em) {
+    .header {
+      margin-block-start: 30px;
+      /* margin-block-end: 90px; */
+    }
+  
+    .header__nav {
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      gap: 32px;
+    }
+  
+    .header__home {
+      flex: 0 1 auto;
+      margin-inline-end: auto;
+    }
+  }
+  
+  @media (min-width: 62.5em) {
+    .header {
+      margin-block-start: 40px;
+      margin-block-end: 127px;
+    }
+  
+    .header__nav {
+      padding-right: 30px;
+    }
+  }
