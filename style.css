@@ -1,0 +1,72 @@
+/* ----------------- */
+/* GLOBAL            */
+/* ----------------- */
+
+/* Custom Properties */
+:root {
+    --bg-body: hsl(0, 0%, 8%); /* Black */
+    --bg-body2: hsl(0, 0%, 14%); /* Dark Gray */
+    --accent: hsl(153, 71%, 59%); /* Accent */
+    --text1: hsl(0, 0%, 100%); /* White */
+    --text2: hsl(0, 0%, 85%); /* Less White */
+    --invalid: hsl(7, 100%, 68%);
+    --fs-18: 1.125rem;
+    /* Desktop xlarge */
+    --fs-88: 5.5rem;
+    /* Tablet xlarge */
+    --fs-72: 4.5rem;
+    /* Mobile xlarge */
+    --fs-40: 2.5rem;
+    /* Desktop large */
+    --fs-48: 3rem;
+    /* Tablet large */
+    --fs-36: 2.25rem;
+    /* Mobile large */
+    --fs-32: 2rem;
+    /* Mobile large */
+    --fs-24: 1.5rem;
+    --fs-20: 1.25rem;
+    --container: 69.375rem;
+    --transition: 250ms ease-in-out;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-body);
+    color: var(--text1);
+    font-size: var(--fs-18);
+    line-height: 1.56;
+    padding-bottom: 25rem;
+}
+
+.bg-less-dark {
+    background-color: var(--bg-body2);
+}
+
